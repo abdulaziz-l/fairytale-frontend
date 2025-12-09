@@ -12,7 +12,6 @@ const AdminLogin = () => {
       setError('Please enter the admin password.')
       return
     }
-    // For MVP, we just store the password locally and let backend validate it.
     localStorage.setItem('ftpb_admin_token', password)
     navigate('/admin/dashboard')
   }
@@ -22,7 +21,7 @@ const AdminLogin = () => {
       <div className="w-full max-w-sm rounded-2xl bg-white/90 p-6 shadow-soft border border-amber-100">
         <h1 className="font-display text-2xl text-slate-900 text-center">Admin Login</h1>
         <p className="mt-2 text-xs text-slate-600 text-center">
-          Enter the admin password to manage orders.
+          For internal use only.
         </p>
 
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">

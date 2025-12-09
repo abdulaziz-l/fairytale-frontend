@@ -8,132 +8,89 @@ const LandingPage = () => {
     <div className="min-h-screen bg-gradient-to-b from-background via-amber-50/80 to-lilac/10">
       <Navbar />
 
-      <main className="mx-auto max-w-6xl px-4 pb-16 pt-10">
-        {/* Hero */}
-        <section className="flex flex-col gap-10 lg:flex-row lg:items-center">
-          <div className="flex-1">
-            <div className="inline-flex items-center gap-2 rounded-full bg-amber-50 px-3 py-1 text-xs text-slate-600 shadow-soft border border-amber-100">
-              <span>✨ New</span>
-              <span className="h-1 w-1 rounded-full bg-bookred" />
-              <span>Turn photos into fairy-tale books</span>
-            </div>
-            <h1 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl text-slate-900 leading-tight">
-              Turn your child into
+      <main className="mx-auto max-w-4xl px-4 pb-16 pt-8">
+        {/* Hero - very simple */}
+        <section className="flex flex-col items-center gap-8 md:flex-row md:items-center md:justify-between">
+          <div className="max-w-md">
+            <h1 className="font-display text-3xl sm:text-4xl text-slate-900 leading-tight">
+              Turn a photo
               <br />
-              <span className="bg-gradient-to-r from-bookred via-orange-500 to-lilac bg-clip-text text-transparent">
-                the hero of their own story.
-              </span>
+              into a fairy-tale book.
             </h1>
-            <p className="mt-4 max-w-xl text-base sm:text-lg text-slate-700">
-              Upload a photo, choose a story template, and receive a beautifully illustrated, printable
-              fairy-tale book where your child is the main character.
+            <p className="mt-3 text-sm sm:text-base text-slate-800">
+              1. You send us a clear photo of your child.
+              <br />
+              2. We put your child inside a fairy-tale story.
+              <br />
+              3. You get a PDF book you can print or read on your phone.
             </p>
 
-            <div className="mt-6 flex flex-wrap items-center gap-4">
+            <div className="mt-5 flex flex-wrap items-center gap-3">
               <Link
                 to="/upload"
-                className="inline-flex items-center gap-2 rounded-full bg-bookred px-6 py-3 text-sm font-semibold text-amber-50 shadow-soft hover:bg-red-700 transition"
+                className="inline-flex items-center gap-2 rounded-full bg-bookred px-5 py-2.5 text-sm font-semibold text-amber-50 shadow-soft hover:bg-red-700 transition"
               >
-                Start your book
+                Upload a photo
                 <span>→</span>
               </Link>
-              <a
-                href="#how-it-works"
-                className="text-sm font-medium text-slate-700 hover:text-bookred transition"
-              >
-                See how it works
-              </a>
+              <span className="text-[11px] text-slate-600">
+                No payment on the website yet. We contact you personally.
+              </span>
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-4 text-xs text-slate-600">
-              <div className="flex items-center gap-2">
-                <span>📕</span>
-                <span>Printable PDF or physical copy</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span>🖼️</span>
-                <span>High-quality, child-friendly artwork</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span>🔒</span>
-                <span>Private & secure photo handling</span>
-              </div>
+            <div className="mt-4 space-y-1 text-[12px] text-slate-700">
+              <p>✅ Very simple. No accounts, no apps.</p>
+              <p>✅ Works for parents in Uzbekistan, Qatar, and anywhere else.</p>
+              <p>✅ We keep your child&apos;s photo private.</p>
             </div>
           </div>
 
-          {/* Right side: 3D-like book cover + thumbnails */}
-          <div className="flex-1 flex justify-center lg:justify-end">
-            <div className="relative">
-              <div className="absolute -left-10 -top-6 h-20 w-20 rounded-full bg-lilac/40 blur-2xl" />
-              <div className="absolute -right-10 bottom-0 h-24 w-24 rounded-full bg-mint/50 blur-2xl" />
-              <div className="relative flex items-center gap-6">
-                <BookCover />
-                <div className="hidden sm:flex flex-col gap-3">
-                  <div className="h-20 w-28 rounded-xl bg-amber-100 shadow-soft flex items-center justify-center text-xs text-slate-700">
-                    Forest Adventure
-                  </div>
-                  <div className="h-20 w-28 rounded-xl bg-lilac/30 shadow-soft flex items-center justify-center text-xs text-slate-800">
-                    Space Journey
-                  </div>
-                  <div className="h-20 w-28 rounded-xl bg-mint/40 shadow-soft flex items-center justify-center text-xs text-slate-800">
-                    Princess & Dragon
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="flex justify-center md:justify-end w-full">
+            <BookCover />
           </div>
         </section>
 
-        {/* How it works */}
-        <section id="how-it-works" className="mt-16">
-          <h2 className="font-display text-2xl sm:text-3xl text-slate-900">
-            How it works
+        {/* How it works - ultra clear */}
+        <section id="how" className="mt-14">
+          <h2 className="font-display text-xl text-slate-900 text-center">
+            How it works (3 very easy steps)
           </h2>
-          <p className="mt-2 max-w-2xl text-sm sm:text-base text-slate-700">
-            We keep things simple, magical, and safe for busy parents.
-          </p>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            <div className="rounded-2xl bg-white/80 p-5 shadow-soft border border-amber-100">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-amber-100 text-bookred text-sm font-semibold">
+          <div className="mt-6 grid gap-4 md:grid-cols-3 text-sm">
+            <div className="rounded-2xl bg-white/90 p-4 shadow-soft border border-amber-100">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-amber-100 text-bookred text-xs font-semibold">
                 1
               </div>
-              <h3 className="mt-4 text-base font-semibold text-slate-900">Upload a photo</h3>
-              <p className="mt-2 text-sm text-slate-700">
-                Choose a clear photo of your child&apos;s face and select a story template that matches
-                their personality.
+              <p className="mt-3 text-slate-800">
+                Fill the short form and upload one clear photo of your child&apos;s face.
               </p>
             </div>
 
-            <div className="rounded-2xl bg-white/80 p-5 shadow-soft border border-amber-100">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-amber-100 text-bookred text-sm font-semibold">
+            <div className="rounded-2xl bg-white/90 p-4 shadow-soft border border-amber-100">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-amber-100 text-bookred text-xs font-semibold">
                 2
               </div>
-              <h3 className="mt-4 text-base font-semibold text-slate-900">We work our magic</h3>
-              <p className="mt-2 text-sm text-slate-700">
-                We carefully transform the photo into fairy-tale artwork and place your child as the main
-                character in the story.
+              <p className="mt-3 text-slate-800">
+                We manually create the book: your child becomes the main character in the story.
               </p>
             </div>
 
-            <div className="rounded-2xl bg-white/80 p-5 shadow-soft border border-amber-100">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-amber-100 text-bookred text-sm font-semibold">
+            <div className="rounded-2xl bg-white/90 p-4 shadow-soft border border-amber-100">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-amber-100 text-bookred text-xs font-semibold">
                 3
               </div>
-              <h3 className="mt-4 text-base font-semibold text-slate-900">Receive your book</h3>
-              <p className="mt-2 text-sm text-slate-700">
-                Once ready, we send you a printable PDF. In selected locations, you can also order a
-                beautifully printed physical book.
+              <p className="mt-3 text-slate-800">
+                We send you a PDF file. You can print it in any copy center or read it on phone/tablet.
               </p>
             </div>
           </div>
         </section>
       </main>
 
-      <footer className="border-t border-amber-100 bg-amber-50/60">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-4 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-          <span>© {new Date().getFullYear()} Fairy Tale Portrait Books. All rights reserved.</span>
-          <span>Made with ✨ for children who love stories.</span>
+      <footer className="border-t border-amber-100 bg-amber-50/70">
+        <div className="mx-auto flex max-w-4xl flex-col gap-1 px-4 py-3 text-[11px] text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+          <span>© {new Date().getFullYear()} Unikid. All rights reserved.</span>
+          <span>Made for busy parents who love stories.</span>
         </div>
       </footer>
     </div>

@@ -9,19 +9,19 @@ const SuccessPage = () => {
     <div className="min-h-screen bg-gradient-to-b from-background via-amber-50/80 to-lilac/10">
       <Navbar />
       <main className="mx-auto flex max-w-2xl flex-col items-center px-4 pb-16 pt-10 text-center">
-        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-mint shadow-soft">
-          <span className="text-2xl">✨</span>
+        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-mint shadow-soft">
+          <span className="text-xl">✨</span>
         </div>
-        <h1 className="mt-4 font-display text-3xl text-slate-900">
-          Thank you for your order!
+        <h1 className="mt-4 font-display text-2xl text-slate-900">
+          Thank you! We received your order.
         </h1>
         <p className="mt-3 text-sm text-slate-700">
-          We&apos;ll now carefully transform your child&apos;s photo into a magical fairy-tale book.
-          Once it&apos;s ready, we&apos;ll send the PDF to your email.
+          We will create your child&apos;s fairy-tale book and send the PDF to your email.
+          If we need anything, we will contact you.
         </p>
         {orderId && orderId !== 'pending' && (
           <p className="mt-2 text-xs text-slate-500">
-            Your order ID is <span className="font-mono">{orderId}</span>. Please keep it for your records.
+            Your order ID: <span className="font-mono">{orderId}</span>
           </p>
         )}
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">

@@ -49,7 +49,6 @@ const AdminDashboard = () => {
         },
       })
 
-      // Refresh orders
       const res = await axios.get(`${backendUrl}/api/admin/orders`, {
         headers: {
           'x-admin-token': adminToken,
@@ -82,7 +81,7 @@ const AdminDashboard = () => {
           </button>
         </div>
         <p className="mt-1 text-xs text-slate-600">
-          View incoming orders, upload finished PDFs, and mark books as ready.
+          See new orders, upload finished PDFs, mark books as ready.
         </p>
 
         {error && (

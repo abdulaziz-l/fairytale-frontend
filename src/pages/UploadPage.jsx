@@ -91,15 +91,15 @@ const UploadPage = () => {
     <div className="min-h-screen bg-gradient-to-b from-background via-amber-50/80 to-lilac/10">
       <Navbar />
 
-      <main className="mx-auto max-w-3xl px-4 pb-16 pt-10">
-        <h1 className="font-display text-3xl text-slate-900">Create your fairy-tale book</h1>
+      <main className="mx-auto max-w-3xl px-4 pb-16 pt-8">
+        <h1 className="font-display text-2xl text-slate-900">Upload a photo and story details</h1>
         <p className="mt-2 text-sm text-slate-700">
-          Fill in the details below and upload a clear photo of your child&apos;s face. We&apos;ll take care of the rest.
+          Simple form. One photo. We do the rest and contact you personally.
         </p>
 
         <form
           onSubmit={handleSubmit}
-          className="mt-8 space-y-6 rounded-2xl bg-white/90 p-6 shadow-soft border border-amber-100"
+          className="mt-6 space-y-6 rounded-2xl bg-white/90 p-6 shadow-soft border border-amber-100"
         >
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
@@ -134,14 +134,14 @@ const UploadPage = () => {
                 ))}
               </select>
               <p className="mt-1 text-[11px] text-slate-500">
-                This decides the world your child appears in: forest, space, or castle.
+                Choose the world for your child: forest, space, or castle.
               </p>
             </div>
           </div>
 
           <div>
             <label className="block text-xs font-medium text-slate-700 mb-1">
-              Parent&apos;s email <span className="text-red-500">*</span>
+              Your email <span className="text-red-500">*</span>
             </label>
             <input
               type="email"
@@ -149,7 +149,7 @@ const UploadPage = () => {
               className="w-full rounded-xl border border-amber-200 bg-amber-50/60 px-3 py-2 text-sm outline-none focus:border-bookred focus:ring-1 focus:ring-bookred"
               value={form.email}
               onChange={handleChange}
-              placeholder="we will send the PDF here"
+              placeholder="We send the book here"
               required
             />
           </div>
@@ -170,7 +170,7 @@ const UploadPage = () => {
               required
             />
             <p className="mt-1 text-[11px] text-slate-500">
-              Please upload a clear, front-facing photo. Max size {MAX_FILE_SIZE_MB}MB.
+              Clear front-facing photo. Max size {MAX_FILE_SIZE_MB}MB.
             </p>
           </div>
 
@@ -182,7 +182,7 @@ const UploadPage = () => {
               type="text"
               disabled
               className="w-full cursor-not-allowed rounded-xl border border-dashed border-amber-200 bg-amber-50/60 px-3 py-2 text-sm text-slate-400"
-              placeholder="Secure card payment will be added soon. For now, we will contact you."
+              placeholder="We will message you about payment. No card needed now."
             />
           </div>
 
@@ -197,7 +197,7 @@ const UploadPage = () => {
             disabled={isSubmitting}
             className="inline-flex items-center gap-2 rounded-full bg-bookred px-6 py-2.5 text-sm font-semibold text-amber-50 shadow-soft hover:bg-red-700 disabled:opacity-60 disabled:cursor-not-allowed transition"
           >
-            {isSubmitting ? 'Submitting...' : 'Submit order'}
+            {isSubmitting ? 'Sending...' : 'Send order'}
           </button>
         </form>
       </main>
